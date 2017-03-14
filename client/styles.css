@@ -1,0 +1,29 @@
+.todo {
+    border: 3px solid black;
+    margin: 2em auto;
+    width: 75%;
+}
+
+.left {
+    width: 35%;
+}
+
+.right {
+    width: 35%;
+    float: right;
+}
+
+body {
+    background-image: url('http://wallpaper-gallery.net/images/galaxy/galaxy-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#pizza {
+    background-image: url('http://vignette1.wikia.nocookie.net/uncyclopedia/images/9/95/Pizzaplanetlogola.PNG/revision/latest?cb=20130205050149');
+    height: 30em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}

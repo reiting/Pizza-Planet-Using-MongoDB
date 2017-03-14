@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pizza Planet</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="pizza"></div>
+    <h1>Add a New Location</h1>
+    <form>
+        Name:
+        </br><input type="text" id="name" placeholder="Name"></br>
+        Delivers?
+        </br><input type="checkbox" id="delivers" name="locations"></br>
+        Phone Number:
+        </br><input type="tel" id="phone" placeholder="Phone"></br>
+        Address Line1:
+        </br><input type="text" id="line1" placeholder="address"></br>
+        Address Line2:
+        </br><input type="text" id="line2" placeholder="apt/suite/etc."></br>
+        City:
+        </br><input type="text" id="city" placeholder="city"></br>
+        State:
+        </br><input type="text" id="state" placeholder="state" maxlength: "2"></br>
+        ZIP:
+        </br><input type="number" id="zip" name="zip" placeholder="zip" maxlength="5"></br>
+        <button id="btn">SUBMIT</button>
+    </form>
+    <h1>Pizza Planet Locations</h1>
+    <div id="todo-container"></div>
+
+</body>
+
+</html>
