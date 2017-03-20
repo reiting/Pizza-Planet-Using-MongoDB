@@ -1,5 +1,8 @@
 $(document).ready(function() {
-$("#btn").click(newLocation);
+$("#btn").click(function() {
+    newLocation();
+    
+})
 
     $.get("http://localhost:3000/api/locations", function(data) {
         for(var i = 0; i < data.length; i++) {
@@ -8,18 +11,14 @@ $("#btn").click(newLocation);
     })
 
 function createDiv(locations) {
-    var cont = $("<div class='todo'></div>");
-    var left = $("<div class='left'></div>");
-    var right = $("<div class='right'></div>");
-    left.append(
-        $("<h2>" + locations.name + "</h2>"),
-        $("<h3>Phone: " + locations.phone + "</h3>"),
+    var cont = $("<div class='singleRestaurant'></div>");
+    cont.append(
+        $("<h1>" + locations.name + "</h2>"),
+        $("<h2>Phone: " + locations.phone + "</h3>"),
         $("<h3>Address: " + locations.address.line1 + "</h3>"),
         $("<h3>" + locations.address.line2 + "</h3>"),
         $("<h3>" + locations.address.city + " " + locations.address.state + " " + locations.address.zip + "</h3>"),
         $("<h3>Delivers? " + locations.delivers.toString() + "</h3>"));
-    cont.css("backgroundColor", "purple");
-    cont.append(left,right);
     $("#todo-container").append(cont);
 }
 
@@ -42,8 +41,9 @@ function newLocation(location) {
         contentType: "application/json",
         data: JSON.stringify(newPizza)
     }).then(function(data) {
-        console.log(data);
-        location.reload;
+        console.log("Did it!");
+        createDiv(location);
+        $('input:not([type=button])').val('');
     }, function (err) {
         console.log(err);
     })

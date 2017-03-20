@@ -3,6 +3,7 @@
 
 <head>
     <title>Pizza Planet</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -10,27 +11,23 @@
 
 <body>
     <div id="pizza"></div>
-    <h1>Add a New Location</h1>
-    <form>
-        Name:
-        </br><input type="text" id="name" placeholder="Name"></br>
-        Delivers?
-        </br><input type="checkbox" id="delivers" name="locations"></br>
-        Phone Number:
-        </br><input type="tel" id="phone" placeholder="Phone"></br>
-        Address Line1:
-        </br><input type="text" id="line1" placeholder="address"></br>
-        Address Line2:
-        </br><input type="text" id="line2" placeholder="apt/suite/etc."></br>
-        City:
-        </br><input type="text" id="city" placeholder="city"></br>
-        State:
-        </br><input type="text" id="state" placeholder="state" maxlength="2"></br>
-        ZIP:
-        </br><input type="text" id="zip" name="zip" placeholder="zip" maxlength="5"></br>
-        <button id="btn">SUBMIT</button>
-    </form>
-    <h1>Pizza Planet Locations</h1>
+    <h1>Add a New Planet!</h1>
+    <div id="addNew">
+        <div id="firstHalf">
+            <input type="text" id="name" placeholder="Name">
+            <label><input type="checkbox" id="delivers" name="locations">Delivery?</label></br>
+            </br><input type="tel" id="phone" placeholder="Phone"></br>
+        </div>
+        <div class="secondHalf">
+            </br><input type="text" id="line1" placeholder="Street Address">
+            <input type="text" id="line2" placeholder="Apt/Suite/etc">
+            <input type="text" id="city" placeholder="City"></br>
+            </br><input type="text" id="state" placeholder="State" maxlength="2">
+            <input type="text" id="zip" name="zip" placeholder="ZIP Code" maxlength="5"></br>
+            <button id="btn">SUBMIT</button>
+        </div>
+    </div>
+    <h1>Discovered Planets</h1>
     <div id="todo-container"></div>
 
 </body>
